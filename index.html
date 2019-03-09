@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>Localization</title>
+	<link rel='stylesheet' href='css/normalize.css'>
+	<link rel='stylesheet' href='css/index.css'>
+</head>
+<body>
+	<h1>Help translating Clear New Tab into the language you know</h1>
+	<br>
+	<p>Currently, Clear New Tab is translated into English and Russian.</p> 
+	<p>Currently, Clear New Tab is not being translated into any language.</p> 
+    <br>
+	</p>This document describes how to translate Clear New Tab into the language you know. Before you begin, make sure that nobody is already working on translation into your language (see above, I will update this document regulary).</p>
+	<br>
+	<p>Let's start. Go <a href='https://bit.ly/i18n-folder' target='_blank' rel='noopener noreferrer'>here</a> and download unpacked version of Clear New Tab. Unzip the folder called dist, then navigate to the _locales folder. In this folder you will see many folders where a localization file (called messages.json) stored. Open a folder with the language you want to translate Clear New Tab to and replace messages.json in this folder with messages.json from the en folder.</p>
+	<br>
+	<p>Now, open messages.json. In this file you will see something like this:</p>
+	<pre><code>
+	"desc": {
+	    "message": "Remove the most visited and other Google stuff from new tab without removing theme image."
+	},
+	
+	
+	"error_alert": {
+	    "message": "An error occured. Error code: "
+	},
+	"error_alert_2": {
+	    "message": "Please try to refresh the page."
+	},
+	
+	
+	
+	"options_title_text": {
+	    "message": "Options"
+	},
+	</code></pre>
+	<p>Your job is to replace English text between "" after <code>"message":</code></p>
+	<p>Let's try changing options page title. Replace</p>
+	<pre><code>			
+	"options_title_text": {
+	    "message": "Options"
+	},
+	</code></pre>
+	<p>with</p>
+	<pre><code>
+	"options_title_text": {
+		"message": "Параметры"
+	},
+	</code></pre>
+	<p>Now, open Chrome and set its user interface to the target language (in our case Russian). Open Chrome's extensions page (chrome://extensions), enable developer mode in the top right corner and drag and drop the dist folder into an extensions page. Open the Clear New Tab's options page and you will see that while all Clear New Tab ui is still in English, a page title is in Russian, like on the image below (right click on the image and select "Open image in new tab" to see it fullsized).</p>
+    <img src='title_translation.png' alt=""/>
+	<p>Every time you make change in an messages.json file you need to click ↻ button in an extensions page to reflect changes.</p>
+	<p>When you finish translating Clear New Tab, send me your messages.json to loftyshaky@gmail.com.</p>
+	<br>
+	<h2>GitHub</h2>
+	<br>
+	<p>Alternatively, you may wish to fork Clear New Tab <a href='http://bit.ly/clear-new-tab-github' target='_blank' rel='noopener noreferrer'>repository</a>. Instructions on how to build Clear New Tab are in readme. When you finish translation open pull request.</p>
+	<br> 
+	<div class='contact'>Contact: <mark>loftyshaky@gmail.com</mark></div>
+</body>
+</html> 
